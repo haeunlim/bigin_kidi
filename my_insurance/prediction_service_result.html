@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta
+      property="og:description"
+      content="보험개발원 보험정보 빅데이터 플랫폼"
+    />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="img/kakaotalk_img.png" /> -->
+    <meta property="og:url" content="" />
+
+    <meta name="Title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Keywords" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Description" content="보험개발원 보험정보 빅데이터 플랫폼" />
+
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+
+    <title>보험개발원 보험정보 빅데이터 플랫폼</title>
+
+    <script>
+      $(function () {
+        //  기본 include
+        commonSet.getSkipNav();
+        commonSet.getHeader();
+        commonSet.getFooter();
+
+        //  탭 가져오기
+        commonSet.getDep3();
+      });
+
+      $(window).on('load',function(){
+        $('.graph_list li > div').each(function(){
+
+          // 그래프 값 표시하는 엘리먼트
+          const $graphvalEl = $(this).find('.graph_val');
+          // 그래프 값 숫자로 표시하는 엘리먼트
+          const $percentNum = $(this).find('.percent_num');
+          // 그래프 값
+          let graphVal =  $graphvalEl.attr('data-percent');
+          // 그래프 값 이 없으면 해당사항 없음 class 적용
+          if(graphVal == 0 ){
+            $(this).find('.graph_wrap').addClass('not');
+          }else{
+            // 그래프 값 보이게 css 적용
+            $graphvalEl.css({"clip-path":"inset(0% " + (100 - graphVal) + "% 0% 0%)"});
+            // 그래프 값 텍스트로 넣기
+            $percentNum.text(graphVal+'%')
+            $percentNum.css({'left':graphVal+"%"})
+          }
+          
+         
+            // 평균 값 표시 ----------------------------
+            // 평균값 엘리먼트
+            const $average = $(this).find('.average');
+            // 평균값 숫자 표시 엘리먼트
+            const $averagePercentNum = $(this).find('.average_percent_num');
+            // 평균값 숫자 
+            let averagePercentNum =  $average.attr('data-average-percent');
+          
+
+          setTimeout(() => {
+              // 평균값 이미지 위치
+              $average.css({"left":averagePercentNum+'%'});
+            // 평균값 숫자 넣기
+          $averagePercentNum.text(averagePercentNum+'%')
+          }, 500);
+        })
+     
+      })
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- container -->
+      <main id="container">
+        <!-- sub_visual -->
+        <section class="sub_visual my_insurance">
+          <div class="inner">
+            <h2 class="sub_visual_ttl">건강정보에 따른 주요 질환 예측 정보</h2>
+            <em class="menu_ttl">메뉴설명</em>
+
+            <nav aria-label="현위치 안내" class="breadcrumb">
+              <ol>
+                <li><span class="home"></span></li>
+                <li><span>보험통계</span></li>
+                <li aria-current="page">
+                  <span>건강정보에 따른 주요 질환 예측 정보</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </section>
+        <!-- //sub_visual -->
+
+        <div class="inner_1120 content">
+          <div class="step_wrap">
+            <ul class="flex-c-c">
+              <li class="step01 ">
+                <div class="ico">
+                  <img
+                    src="../assets/img/sub/step01_ico.png"
+                    alt="step01 입력정보"
+                  />
+                </div>
+                <p>step 01</p>
+              </li>
+              <li class="step02 ">
+                <div class="ico">
+                  <img
+                    src="../assets/img/sub/step02_ico.png"
+                    alt="step02 입력정보"
+                  />
+                </div>
+                <p>step 02</p>
+              </li>
+              <li class="active">
+                <div class="ico">
+                  <img
+                    src="../assets/img/sub/result_ico.png"
+                    alt="결과보기"
+                  />
+                </div>
+                <p>결과보기</p>
+              </li>
+            </ul>
+          </div>
+          <section class="disease_prediction_sect result_page card">
+           
+            <div class="form_ttl_box">
+              <h2 class="form_ttl">5년내 주요 질환 발병률 예측 결과서 
+            </h2>
+            </div>
+            <div class="graph_list_wrap">
+              <ul class="graph_list">
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      간암 발병 확률 (5년내)
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="20"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      고지혈증 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="20"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      고혈압 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="35"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="50"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      골절 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="0"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="50"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      뇌졸중 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="75"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="50"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      대장암 발병 확률 (5년내)
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="90"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="40"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      류마티스 관절염 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="30"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      만성신장병 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="15"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      만성폐쇄성 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="60"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      심근경색 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="25"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="15"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      삼방세동 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="15"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      심부전 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="15"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="20"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      우울증 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="20"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      위암 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="25"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="30"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      유방암 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="0"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="30"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      제2형 당뇨병 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      천식 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      치매 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="0"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="left">
+                    <h3 class="graph_ttl">
+                      폐렴 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <h3 class="graph_ttl">
+                      폐암 발병 확률 (5년내) 
+                    </h3>
+                    <div class="graph_wrap">
+                      <div class="graph"><span class="percent_num"><!--5%--></span> 
+                        <div class="graph_val" data-percent="5"><img src="../assets/img/sub/graph.png" alt=" "></div>
+                        <div class="average" data-average-percent="10"><span class="average_percent_num">0.5%</span><span class="hide"> 동일질병 모델의 평균값 아이콘</span></div>
+                      </div>
+                      <div class="graph_bot flex-b-c">
+                        <div class="graph_start">0</div>
+                       
+                        <div class="graph_end">100</div>
+                      </div>
+                       <div class="graph_text">동일 질병모델의 평균값 비교
+                        </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          
+          </section>
+        </div>
+      </main>
+      <!-- // container  -->
+    </div>
+
+    <script>
+      const nowBreadcrum = document.querySelector(
+        '.breadcrumb li[aria-current="page"] span'
+      );
+     
+    </script>
+  </body>
+</html>

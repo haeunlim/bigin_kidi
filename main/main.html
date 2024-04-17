@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta
+      property="og:description"
+      content="보험개발원 보험정보 빅데이터 플랫폼"
+    />
+    
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="img/kakaotalk_img.png"> -->
+    <meta property="og:url" content="" />
+
+    <meta name="Title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Keywords" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Description" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="apple-mobile-web-app-title" content="50대 주요 지표" />
+    <script src="../assets/js/common.js"></script>
+
+    <title>50대 주요 지표</title>
+
+    <script>
+      $(function () {
+        //  기본 include
+        commonSet.getSkipNav();
+        commonSet.getHeader();
+        commonSet.getFooter();
+
+        //  탭 가져오기
+        commonSet.getDep3();
+        commonSet.getQuick();
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- 작업된부분 -->
+    <div class="top_alert_box" tabindex="1" >
+        <div class="inner flex-b-c">
+            <a href="#!" class="notice_text_wrap flex--c" target="_blank" title="공지사항 새창으로 보기">
+              <span class="notice_badge">notice</span>
+              <p>[시스템 점검 안내] 2024년 1월 10일 오후 11시 00시 부터 ~ 오후11시 30분 까지
+              </p>
+        
+            </a>
+            <div class="top_close_box flex--c">
+              <div class="chk_box">
+                <input type="checkbox" id="no_look" name="no_look">
+                <label for="no_look" >
+                    다시 안보기
+                </label>
+        
+              </div>
+              <button type="button" class="close_btn" onclick="closeTopAlertBox()" aria-label="알림 배너 닫기버튼">
+             <a href="#!"></a>
+              </button>
+            </div>
+        </div>
+    </div>
+    <script>
+      function closeTopAlertBox(){
+        $('.top_alert_box').css('display','none')
+      }
+    </script>
+  <!-- 작업된부분 끝-->
+    <div id="wrap">
+      <main id="container">
+        <!-- 작업된부분 -->
+        <section class="main_visual bg04" id="main_visual_sect">
+               <!-- 작업된부분 끝-->
+          <div class="inner">
+            <div class="main_visual_top">
+              <div class="search_form_wrap">
+                <form action="../sub/search_main.html">
+                  <div class="form-item search_form">
+                    <label for="in_text" class="hidden"
+                      >메인페이지 검색어 입력</label
+                    >
+                    <input
+                      type="text"
+                      class="bs-input"
+                      id="in_text"
+                      placeholder="검색어를 입력해주세요"
+                      title="검색어 입력"
+                    />
+                    <button
+                      type="submit"
+                    title="검색"
+                      aria-label="검색"
+                      class="form_search"
+                    ></button>
+                  </div>
+                </form>
+              </div>
+              <div class="recommended_list flex--c">
+                <p class="label"><span>추천검색어</span></p>
+                <div class="recommended flex--c side-by-side">
+                  <a href="/sub/search_main.html">#자동차보험</a>
+                  <a href="/sub/search_main.html">#휴면보험금</a>
+                  <a href="/sub/search_main.html">#휴차료 알림표</a>
+                  <a href="/sub/search_main.html">#카 히스토리</a>
+                  <a href="/sub/search_main.html">#차량기준가액</a>
+                </div>
+                <button
+                  type="button"
+                  class="recommend_more_btn only_mo"
+                  aria-label="추천 검색어 더 보기"
+                ></button>
+                <!-- mobile에서만 노출 -->
+                <div class="mobile_more_wrap">
+                  <a href="/sub/search_main.html">#자동차보험</a>
+                  <a href="/sub/search_main.html">#휴면보험금</a>
+                  <a href="/sub/search_main.html">#휴차료 알림표</a>
+                  <a href="/sub/search_main.html">#카 히스토리</a>
+                  <a href="/sub/search_main.html">#차량기준가액</a>
+                </div>
+              </div>
+            </div>
+            <div class="main_visual_bottom">
+             <!-- 작업된부분 -->
+              <div class="swiper-container mainVisualSlider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <div class="card text-white green">
+                      <div class="card_ttl_box">
+                        <h2 class="card_ttl">실손보험 가입률</h2>
+                        <p class="date">2022년 기준</p>
+                      </div>
+                      <ul class="card_cont">
+                        <li>
+                          <p class="label">남자</p>
+                          <p class="amount"><strong>66.1</strong>%</p>
+                        </li>
+                        <li>
+                          <p class="label">여자</p>
+                          <p class="amount"><strong>66.1</strong>%</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card text-white blue">
+                      <div class="card_ttl_box">
+                        <h2 class="card_ttl">
+                          자동차보험 1대당<br />
+                          평균보험료
+                        </h2>
+                        <p class="date">2022년 기준</p>
+                      </div>
+                      <ul class="card_cont">
+                        <li>
+                          <p class="label">자가용</p>
+                          <p class="amount"><strong>756</strong>천원</p>
+                        </li>
+                        <li>
+                          <p class="label">영업용</p>
+                          <p class="amount"><strong>1,322</strong>천원</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card text-white blue2 ">
+                      <div class="card_ttl_box">
+                        <h2 class="card_ttl">자동차 보험 1대당<br>
+                          평균보험료</h2>
+                        <p class="date">2020~2022년 기준</p>
+                      </div>
+                      <ul class="card_cont">
+                        <li>
+                          <p class="label">생명보험</p>
+                          <p class="amount"><strong>48,589</strong>원</p>
+                        </li>
+                        <li>
+                          <p class="label">손해보험</p>
+                          <p class="amount"><strong>26,589</strong>원</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card text-white purple">
+                      <div class="card_ttl_box">
+                        <h2 class="card_ttl">
+                          5대 다빈도 질환군<br>
+환자 수
+                        </h2>
+                        <p class="date">2020~2022년 기준</p>
+                      </div>
+                      <ul class="card_cont">
+                        <li>
+                          <p class="label">외래 환자 수</p>
+                          <p class="amount"><strong>244,589</strong>명</p>
+                        </li>
+                        <li>
+                          <p class="label">입원 환자 수</p>
+                          <p class="amount"><strong>26,589</strong>명</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-nav-wrap">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-play-btn">
+                    <button type="button" class="pause-btn active">정지버튼</button>
+                    <button type="button" class="play-btn">재생버튼</button>
+                  </div>
+                </div>
+              </div>
+               <!-- 작업된부분  끝-->
+            </div>
+          </div>
+        </section>
+        <div class="main_content">
+          <div class="main_top_content">
+            <section class="insurance_statistics_sect">
+              <div class="inner">
+                <div class="main_ttl_box">
+                  <h2 class="main_ttl point text-green">
+                    <span>보험통계</span>
+                  </h2>
+                </div>
+                <div class="main_ins_sta_sec">
+                  <h3 class="main_sub_ttl">50대 주요 보험 지표</h3>
+                  <div class="card_list_wrap">
+                    <ul class="card_list border flex col-4">
+                      <li>
+                        <a href="/ins_stats/key_insurance_indicators_view.html">
+                          <p class="badge green"><span>공통</span></p>
+                          <div class="cover-img">
+                            <img
+                              src="../assets/img/main/state_01.png"
+                              alt=" "
+                            />
+                          </div>
+                          <div class="text_box">
+                            <p class="subject">
+                              국내총생산 대비 <br />
+                              수입보험료 규모(보험침투도)
+                            </p>
+                            <div class="text_bot">
+                              <strong class="tac number">10.9</strong>
+                              <p class="badge tac sm"><span> 단위: % </span></p>
+                              <p class="year tar text_sm">(2021년 기준)</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/ins_stats/key_insurance_indicators_view_3.html"
+                        >
+                          <p class="badge green"><span>공통</span></p>
+                          <div class="cover-img">
+                            <img
+                              src="../assets/img/main/state_02.png"
+                              alt=" "
+                            />
+                          </div>
+                          <div class="text_box">
+                            <p class="subject">국민 1인당 보험료</p>
+                            <div class="text_bot">
+                              <strong class="tac number">4,377,974</strong>
+                              <p class="badge tac sm">
+                                <span> 단위 : 원</span>
+                              </p>
+                              <p class="year tar text_sm">(2021년 기준)</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/ins_stats/key_insurance_indicators_view_4.html"
+                        >
+                          <p class="badge blue"><span>생명/장기보험</span></p>
+                          <div class="cover-img">
+                            <img
+                              src="../assets/img/main/state_03.png"
+                              alt=" "
+                            />
+                          </div>
+                          <div class="text_box">
+                            <p class="subject">기대수명</p>
+                            <div class="text_bot">
+                              <strong class="tac number">83.6</strong>
+                              <p class="badge tac sm">
+                                <span> 단위 : 년</span>
+                              </p>
+                              <p class="year tar text_sm">(2021년 기준)</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/ins_stats/key_insurance_indicators_view_2.html"
+                        >
+                          <p class="badge pink"><span>자동차보험</span></p>
+                          <div class="cover-img">
+                            <img
+                              src="../assets/img/main/state_04.png"
+                              alt=" "
+                            />
+                          </div>
+                          <div class="text_box">
+                            <p class="subject">자동차보험 가입 대수</p>
+                            <div class="text_bot">
+                              <strong class="tac number">24,805</strong>
+                              <p class="badge tac sm">
+                                <span> 단위 : 천 대</span>
+                              </p>
+                              <p class="year tar text_sm">(2022 기준)</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    href="/ins_stats/key_insurance_indicators.html"
+                    class="more_view_btn"
+                    title="50대 주요 보험 지표 더보기"
+                    >더보기+</a
+                  >
+                </div>
+
+                <div class="supplementary_information_box">
+                  <h3 class="main_sub_ttl">인기정보 서비스</h3>
+                  <ul class="supplementary_list flex col-2">
+                    <li>
+                      <a
+                        href="/ins_stats/retirement_list.html"
+                        class="supplementary_card green"
+                      >
+                        <span class="ico ico01"></span>
+                        <div class="text_box">
+                          <p>은퇴시장<br class="only_mo" />통계정보</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/ins_stats/statistical_services.html"
+                        class="supplementary_card green"
+                      >
+                        <span class="ico ico02"></span>
+                        <div class="text_box">
+                          <p>보험통계<br class="only_mo" />조회서비스</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- <li>
+                    <a href="/report/company_statistics_lsit.html" class="supplementary_card green">
+                      <span class="ico ico03"></span>
+                      <div class="text_box">
+                        <p>기업성보험통계<br class="only_mo">보고서</p>
+                      </div>
+                    </a>
+                  </li> -->
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="useful_insurance_sect">
+              <div class="inner">
+                <div class="main_ttl_box">
+                  <h2 class="main_ttl text-red point">
+                    <span>알·쓸보험</span>
+                  </h2>
+                </div>
+                <div class="weekly main_weekly">
+                  <h3 class="main_sub_ttl">Weekly 보험상식</h3>
+                  <ul class="thumb_list flex col-4">
+                    <li>
+                      <a href="/ins_info/weekly_view.html">
+                        <div class="cover-img">
+                          <img src="../assets/img/sub/weekly_01.png" alt=" " />
+                        </div>
+                        <div class="info_desc">
+                          <em class="tag sky">자동차보험</em>
+                          <p class="thumb_ttl">자동차 보험료 할인특약</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ins_info/weekly_view_2.html">
+                        <div class="cover-img">
+                          <img src="../assets/img/sub/weekly_02.png" alt=" " />
+                        </div>
+                        <div class="info_desc">
+                          <em class="tag blue">보험상식</em>
+                          <p class="thumb_ttl">
+                            보장성 보험과 저축성 보험 비교
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ins_info/weekly_view_3.html">
+                        <div class="cover-img">
+                          <img src="../assets/img/sub/weekly_03.png" alt=" " />
+                        </div>
+                        <div class="info_desc">
+                          <em class="tag pink">생활밀착형보험</em>
+                          <p class="thumb_ttl">
+                            해외 여행자보험의 주요 보장내용
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ins_info/weekly_view_4.html">
+                        <div class="cover-img">
+                          <img src="../assets/img/sub/weekly_07.png" alt="" />
+                        </div>
+                        <div class="info_desc">
+                          <em class="tag orange">기타</em>
+                          <p class="thumb_ttl">펫보험 주요 보장 및 상품 유형</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <a
+                    href="/ins_info/weekly_list.html"
+                    class="more_view_btn"
+                    title="Weekly 보험상식 더보기"
+                    >더보기+</a
+                  >
+                </div>
+
+                <div class="supplementary_information_box">
+                  <h3 class="main_sub_ttl">
+                    알아두면 쓸모 있는 자동차보험 정보
+                  </h3>
+                  <div class="slider_wrap">
+                    <div
+                      class="swiper-container supplementary_information_slider"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" role="group">
+                          <a
+                            href="/ins_info/car_price.html"
+                            class="supplementary_card pink"
+                          >
+                            <span class="ico ico01"></span>
+                            <div class="text_box">
+                              <p>차량기준<br class="only_mo" />가액</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide" role="group">
+                          <a
+                            href="/ins_info/repair_standard.html"
+                            class="supplementary_card pink"
+                          >
+                            <span class="ico ico02"></span>
+                            <div class="text_box">
+                              <p>경미손상수리<br class="only_mo" />기준</p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide" role="group">
+                          <a
+                            href="/ins_info/traffic_accident_status.html"
+                            class="supplementary_card pink"
+                          >
+                            <span class="ico ico03"></span>
+                            <div class="text_box">
+                              <p>
+                               자동차보험 광역도시별<br/>
+                                교통사고 현황
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- 추가된곳 여기부터 -->
+                        <div class="swiper-slide" role="group">
+                          <a
+                            href="/ins_info/car_model_grade.html"
+                            class="supplementary_card pink"
+                          >
+                            <span class="ico ico04"></span>
+                            <div class="text_box">
+                              <p>
+                                차량모델<br class="only_mo" />등급
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide" role="group">
+                          <a
+                            href="/ins_info/car_cost_index.html"
+                            class="supplementary_card pink"
+                          >
+                            <span class="ico ico05"></span>
+                            <div class="text_box">
+                              <p>
+                                자동차보험금<br class="only_mo" />
+                                원가지수
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- 추가된곳 여기부터 -->
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="main_bot_content">
+            <section class="my_banner_sect">
+              <div class="inner">
+                <div class="main_ttl_box">
+                  <h2 class="main_ttl text-blue point">
+                    <span>MY 보험</span>
+                  </h2>
+                  <h3 class="main_sub_ttl mo_sm">
+                    간편하게 건강상태별 질환 발병 가능성 확인 서비스
+                  </h3>
+                </div>
+                <div class="my_banner_wrap">
+                  <a href="/my_insurance/disease_prediction.html">
+                    <div class="text_box text-white">
+                      <p class="subject lg">
+                        한국인 주요 20대 질환 발생률, 사망률 등 예측 서비스!
+                      </p>
+                      <p>자발적인 건강 관리 할 수 있는 간편 서비스</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="my_key_services">
+                  <h3 class="main_sub_ttl">
+                    돈을 아끼는 자동차보험 주요서비스
+                  </h3>
+                  <div class="slider_wrap">
+                    <div class="swiper-container my_key_services_slider">
+                      <div class="swiper-wrapper card_list border">
+                        <div class="swiper-slide card">
+                          <a href="https://aipis.kidi.or.kr:1443/"  target="_blank"  title="자동차보험 과납보험료 및 휴면보험금 조회시스템 새창으로 보기">
+                            <figure class="img img01">
+                              <img
+                                src="../assets/img/main/readMore_img.png"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  자동차보험 과납보험료 및 <br />
+                                  휴면보험금 조회시스템</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a href="https://mycar.kidi.or.kr/"  target="_blank"  title="내 차보험 찾기 새창으로 보기">
+                            <figure class="img img02">
+                              <img
+                                src="../assets/img/main/car_img.png"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  내 차보험 찾기<br />
+                                  Mycar</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a href="https://prem.kidi.or.kr:1443/">
+                            <figure class="img img03">
+                              <img
+                                src="../assets/img/main/calculator_img.png"  target="_blank"  title="자동차보험 할인 할증요인 조회 새창으로 보기"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  자동차보험 할인<br />
+                                  할증요인 조회</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://iics.kidi.or.kr/main/main.do"  target="_blank"  title="자동차보험정보 고객센터 새창으로 보기"
+                          >
+                            <figure class="img img04">
+                              <img
+                                src="../assets/img/main/contact_img.png"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  자동차보험정보 <br />
+                                  고객센터</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- 추가된곳 여기부터 -->
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://driver.kidi.or.kr:2443/
+                            "  target="_blank"  title="대리운전자보험 조회시스템  새창으로 보기"
+                          >
+                            <figure class="img img04">
+                              <img
+                                src="../assets/img/main/card.png"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  대리운전자보험 <br />
+                                  조회시스템</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://www.carhistory.kr/"   target="_blank"  title="자동차사고 이력정보 새창으로 보기">
+                            <figure class="img img04">
+                              <img
+                                src="../assets/img/main/kkalkalcon.png"
+                                alt=" "
+                              />
+                            </figure>
+                            <div class="text_box">
+                              <p>
+                                <strong>
+                                  자동차사고 <br />이력정보</strong
+                                >
+                              </p>
+                            </div>
+                          </a>
+                        </div>
+                             <!-- 추가된곳 여기까지 -->
+                      </div>
+                    </div>
+                    <div class="swiper-slide-btn">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="my_key_services">
+                  <h3 class="main_sub_ttl">나에게 도움이 되는 주요 서비스</h3>
+                  <div class="slider_wrap">
+                    <div class="swiper-container my_key_services_slider">
+                      <div class="swiper-wrapper card_list border">
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://www.e-insmarket.or.kr/"
+                             target="_blank"  title="보험다모아 새창으로 보기"
+                          >
+                            <figure class="img bg-gray">
+                              <img src="../assets/img/main/key_service2_damoa.jpg" alt=" " />
+                            </figure>
+                            <div class="text_box">
+                              <p><strong>보험다모아</strong></p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://cont.insure.or.kr/cont_web/intro.do"
+                             target="_blank"  title="내 보험 찾아줌 새창으로 보기"
+                          >
+                            <figure class="img bg-gray multiply">
+                              <img src="../assets/img/main/key_service2_zoom.jpg" alt=" " />
+                            </figure>
+                            <div class="text_box">
+                              <p><strong>내 보험 찾아줌</strong></p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://campaign.naver.com/insurance/"
+                             target="_blank"  title="사장님 보험가이드 새창으로 보기"
+                          >
+                            <figure class="img">
+                              <img src="../assets/img/main/key_service2_naver.jpg" alt=" " />
+                            </figure>
+                            <div class="text_box">
+                              <p><strong>사장님 보험가이드</strong></p>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://kosis.kr/index/index.do"
+                             target="_blank"  title="국가통계포털 새창으로 보기"
+                          >
+                            <figure class="img">
+                              <img src="../assets/img/main/key_service2_kosis.jpg" alt=" " />
+                            </figure>
+                            <div class="text_box">
+                              <p><strong>국가통계포털</strong></p>
+                            </div>
+                          </a>
+                        </div>
+                        <!-- 추가된곳 여기부터 -->
+                        <div class="swiper-slide card">
+                          <a
+                            href="https://ecos.bok.or.kr/"  target="_blank"  title="한국은행경제통계시스템 새창으로 보기" >
+                            <figure class="img">
+                              <img src="../assets/img/main/key_service2_ecos.jpg" alt=" " />
+                            </figure>
+                            <div class="text_box">
+                              <p><strong>한국은행경제통계시스템</strong></p>
+                            </div>
+                          </a>
+                        </div>
+                               <!-- 추가된곳 여기까지 -->
+                      </div>
+                    </div>
+                    <div class="swiper-slide-btn">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 보험소식 -->
+            <section class="insurance_news_sect">
+              <div class="inner">
+                <div class="main_ttl_box">
+                  <h2 class="main_ttl">보험소식</h2>
+                </div>
+                <div class="ins_new_wrap">
+                  <div
+                    class="insurance_news_tab"
+                    role="tablist"
+                    id="insurance_news_tab"
+                  >
+                    <button
+                      type="button"
+                      value="active01"
+                      class="active"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="tabPanel1"
+                    >
+                      국내보험동향
+                    </button>
+                    <button
+                      type="button"
+                      value="active02"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="tabPanel2"
+                    >
+                      기업성보험 통계보고서
+                    </button>
+                    <button
+                      type="button"
+                      value="active03"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="tabPanel3"
+                    >
+                      Monthly KIDI Brief
+                    </button>
+                  </div>
+
+                  <div class="insurance_news_cont">
+                    <!-- 국내보험동향 -->
+                    <div
+                      class="swiper-container insurance_news_slider active01 active"
+                      role="tabpanel"
+                      id="tabPanel1"
+                      aria-hidden="false"
+                    >
+                      <div class="swiper-wrapper card_list border">
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/insurance_trends_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>국내보험동향</p>
+                              <p class="subject lg">
+                                보험개발원(카히스토리) 제주호국원 전동카트 기부
+                              </p>
+                              <p class="desc">
+                                보험개발원은 카히스토리 공익적 역할 확대
+                                차원에서  10/12일 국립제주호국원에
+                                노약자,고령자의 호국원 참배편의를 위한 전동카트
+                                2대를 기부
+                              </p>
+                            </div>
+                            <p class="date">2023.10.12</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/insurance_trends_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>국내보험동향</p>
+                              <p class="subject lg">
+                                보험개발원, 교통사고 과실협의 소비자 리포트
+                                서비스 개시
+                              </p>
+                              <p class="desc">
+                                보험개발원은 10월부터 차대차 사고를 내고
+                                과실협의가 있는 고객에게 보험사 사이에서
+                                진행되는 과실협의 내용/결과를 소비자 리포트로
+                                제공하는 서비스를 지원 및 시작
+                              </p>
+                            </div>
+                            <p class="date">2023.09.26</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/insurance_trends_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>국내보험동향</p>
+                              <p class="subject lg">
+                                백내장 보험사기 의사 "벌금형"
+                              </p>
+                              <p class="desc">
+                                진료비 내역서를 거짓으로 작성, 환자들이 보험금을
+                                받도록 한 혐의 등으로 재판에 넘겨진 안과 의사가
+                                징역형은 면했으나 벌금을 내게 됐다.
+                              </p>
+                            </div>
+                            <p class="date">2023.10.06</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/insurance_trends_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>국내보험동향</p>
+                              <p class="subject lg">
+                                음주운전 사망사고' 증가일로… "처벌·보험료 할증
+                                높여야"
+                              </p>
+                              <p class="desc">
+                                음주운전 교통사고 발생건수가 다시 늘어나고 있는
+                                가운데, 미국·일본처럼 처벌수위를 높이고 보험료
+                                2배이상 상향 등 기대비용을 강화해야 한다는
+                                주장이 제기됐다.
+                              </p>
+                            </div>
+                            <p class="date">2023.06.08</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/insurance_trends_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>국내보험동향</p>
+                              <p class="subject lg">
+                                보험개발원, '2023 KIDI 보험미래포럼' 개최
+                              </p>
+                              <p class="desc">
+                                보험개발원(원장 허창언)은 9월 13일 "NEXT
+                                GENERATION, DATA와 함께 미래로" 라는 주제로 2023
+                                KIDI 보험미래포럼을 개최함.
+                              </p>
+                            </div>
+                            <p class="date">2023.11.25</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 기업성보험 통계보고서 -->
+                    <div
+                      class="swiper-container insurance_news_slider active02"
+                      role="tabpanel"
+                      id="tabPanel2"
+                      aria-hidden="true"
+                    >
+                      <div class="swiper-wrapper card_list border">
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/company_statistics_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>기업성보험 통계보고서</p>
+                              <p class="subject lg">
+                                2023년 기업성보험 통계분석 보고서
+                              </p>
+                              <p class="desc">
+                                Ⅰ. 작성개요<br />
+                                Ⅱ. 기업성보험 개요 <br />
+                                Ⅲ. 분석방법 <br />
+                                &nbsp;&nbsp;1. 분석개요 <br />
+                                &nbsp;&nbsp;2. 위험지표 산출
+                              </p>
+                            </div>
+                            <p class="date">2023.09.27</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/company_statistics_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>기업성보험 통계보고서</p>
+                              <p class="subject lg">
+                                2022년 기업성보험 통계분석 보고서
+                              </p>
+                              <p class="desc">
+                                Ⅰ. 작성개요<br />
+                                Ⅱ. 기업성보험 개요 <br />
+                                Ⅲ. 분석방법 <br />
+                                &nbsp;&nbsp;1. 분석개요 <br />
+                                &nbsp;&nbsp;2. 위험지표 산출
+                              </p>
+                            </div>
+                            <p class="date">2022.09.29</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/company_statistics_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>기업성보험 통계보고서</p>
+                              <p class="subject lg">
+                                2021년 기업성보험 통계분석 보고서
+                              </p>
+                              <p class="desc">
+                                Ⅰ. 작성개요<br />
+                                Ⅱ. 기업성보험 개요 <br />
+                                Ⅲ. 분석방법 <br />
+                                &nbsp;&nbsp;1. 분석개요 <br />
+                                &nbsp;&nbsp;2. 위험지표 산출
+                              </p>
+                            </div>
+                            <p class="date">2021.09.30</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/company_statistics_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>기업성보험 통계보고서</p>
+                              <p class="subject lg">
+                                2020년 기업성보험 통계분석 보고서
+                              </p>
+                              <p class="desc">
+                                Ⅰ. 작성개요<br />
+                                Ⅱ. 기업성보험 개요 <br />
+                                Ⅲ. 분석방법 <br />
+                                &nbsp;&nbsp;1. 분석개요 <br />
+                                &nbsp;&nbsp;2. 위험지표 산출
+                              </p>
+                            </div>
+                            <p class="date">2023.06.08</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="/report/company_statistics_view.html"
+                            class="card"
+                          >
+                            <div class="text_box">
+                              <p>기업성보험 통계보고서</p>
+                              <p class="subject lg">
+                                2019년 기업성보험 통계분석 보고서
+                              </p>
+                              <p class="desc">
+                                Ⅰ. 작성개요<br />
+                                Ⅱ. 기업성보험 개요 <br />
+                                Ⅲ. 분석방법 <br />
+                                &nbsp;&nbsp;1. 분석개요 <br />
+                                &nbsp;&nbsp;2. 위험지표 산출
+                              </p>
+                            </div>
+                            <p class="date">2019.09.20</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  Monthly KIDI Brief -->
+                    <div
+                      class="swiper-container insurance_news_slider active03"
+                      role="tabpanel"
+                      id="tabPanel3"
+                      aria-hidden="true"
+                    >
+                      <div class="swiper-wrapper card_list border">
+                        <div class="swiper-slide">
+                          <a href="/report/monthly_view.html" class="card">
+                            <div class="text_box">
+                              <p>Monthly KIDI Brief</p>
+                              <p class="subject lg">
+                                보험개발원 Monthly KIDI BRIEF (2023년 10월)
+                              </p>
+                              <p class="desc">
+                                □ 금융권 멀티 클라우드 가속화... 비용 절감도
+                                추진 [출처 : 아이뉴스24 23.10.23]<br />
+                                □ 가트너, 2024년 10대 전략 기술 트랜드 발표
+                                [출처 : IT Daily 23.10.17]
+                              </p>
+                            </div>
+                            <p class="date">2023.10.12</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="/report/monthly_view.html" class="card">
+                            <div class="text_box">
+                              <p>Monthly KIDI Brief</p>
+                              <p class="subject lg">
+                                보험개발원 Monthly KIDI BRIEF (2023년 09월)
+                              </p>
+                              <p class="desc">
+                                □ 금감원, 금융권 다크웹 위협 대응체계 논의 [출처
+                                : 뉴시스, 23.9.10] <br />
+                                □ 한국인터넷 진흥원(KISA), 간편인증 인터페이스
+                                가이드라인 마련 [출처 : ZDNET Korea 23.9.5]
+                              </p>
+                            </div>
+                            <p class="date">2023.09.26</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="/report/monthly_view.html" class="card">
+                            <div class="text_box">
+                              <p>Monthly KIDI Brief</p>
+                              <p class="subject lg">
+                                보험개발원 Monthly KIDI BRIEF (2023년 08월)
+                              </p>
+                              <p class="desc">
+                                □ 금융권 사이버 침해위협 분석대회, 「FIESTA
+                                2023」 개최 [출처 : 금융보안원. 23.8.18]<br />
+                                □ 챗GPT 타고 확산하는 ‘거대언어모델’ … sLLM 구축
+                                확대일로 [출처 : 컴퓨터월드 23.8월호]
+                              </p>
+                            </div>
+                            <p class="date">2023.10.06</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="/report/monthly_view.html" class="card">
+                            <div class="text_box">
+                              <p>Monthly KIDI Brief</p>
+                              <p class="subject lg">
+                                보험개발원 Monthly KIDI BRIEF (2023년 07월)
+                              </p>
+                              <p class="desc">
+                                □ 금감원, 금융IT 비상대책 가이드라인 제정한다
+                                [출처 : 연합뉴스. 23.7.13] <br />
+                                □ 금융위, 혁신금융서비스 15건 신규 지정 [출처 :
+                                금융위원회, 23.7.19]
+                              </p>
+                            </div>
+                            <p class="date">2023.06.08</p>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="/report/monthly_view.html" class="card">
+                            <div class="text_box">
+                              <p>Monthly KIDI Brief</p>
+                              <p class="subject lg">
+                                보험개발원 Monthly KIDI BRIEF (2023년 06월)
+                              </p>
+                              <p class="desc">
+                                □ 금융 IT자회사, 연매출 3천억대 싱크탱크로 부상
+                                [출처 : 전자신문, 23.6.13] <br />
+                                □ 국민銀, 은행권 최초 '생성형 AI' 도입 추진
+                                [출처 : 전자신문, 23.6.19]
+                              </p>
+                            </div>
+                            <p class="date">2023.11.25</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#insurance_news_tab" class="goto-control"
+                      >탭으로 돌아가기</a
+                    >
+                  </div>
+
+                  <div class="insurance_news_slider_btns">
+                    <div class="swiper-slide-btn active01 active">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-slide-btn active02">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-slide-btn active03">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- // 보험소식 -->
+          </div>
+        </div>
+      </main>
+      <!-- // container  -->
+
+      <!-- 수정된곳 여기부터 -->
+      <!-- popup -->
+      <div class="popup-wrap" id="mainPopup" style="display: block;" role="dialog" aria-hidden="true" aria-modal="true" aria-labelledby="메인 알림 팝업창" aira-describedby="메인 알림 팝업창">
+        <div class="popup-box" tabindex="1">
+        
+          <div class="popup-body" >
+            <button type="button" aria-label="팝업창 닫기" class="popup-close-btn" onClick="HandleClosePopup('#mainPopup')" tabindex="6">
+              <img src="../assets/img/btn/modal_close.png" alt="" />
+            </button>
+            <h2 class="popup-ttl ellipsis-2" tabindex="2">타이틀이나오는자리인데총30자의글자가들어가도록 작업해주세요</h2>
+            <div class="desc-box" tabindex="3">
+              
+              동해물과 백두산이 마르고 닳도록하느님이 보우하사 우리나라 만세 무궁화
+              삼천리 화 려 강산대한 사람 대한으로 길이 보전하세, 남산 위에 저 소나무
+              철갑을 두른 듯 바람 서 리 불변함은 우리 기상일세 무궁화 삼천리 화려
+              강산 대한 사람 대한으로 길이 보전하세 가을 하늘 공활한데 높고 구름
+              없이 밝은 달은 우리 가슴 일편단심일세 무궁화 삼천리 화려 강산 대한
+              사람 대한으로 길이 보전하세,이 기상과 이 맘으로 충성을 다하여 괴로
+              우나 즐거우나 나라 사랑하세 무궁화 삼천리 화려 강산 대한 사람 대한으로
+              길이 보전하
+              <img src="../assets/img/main/popup_img.jpg" alt="팝업 이미지" style="margin-top: 20px" />         
+            </div>
+          </div>
+          <div class="popup-footer flex--c">
+            <button type="button" class="btn btn-lg text-gray" tabindex="4">하루 동안 보지 않음</button>
+            <button type="button" class="btn btn-lg" onClick="HandleClosePopup('#mainPopup')" tabindex="5">닫기</button>
+          </div>
+        </div>
+      </div>
+      <!-- popup  -->
+        <!-- 수정된곳 여기까지 -->
+    </div>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

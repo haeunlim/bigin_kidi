@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta
+      property="og:description"
+      content="보험개발원 보험정보 빅데이터 플랫폼"
+    />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="img/kakaotalk_img.png" /> -->
+    <meta property="og:url" content="" />
+
+    <meta name="Title" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Keywords" content="보험개발원 보험정보 빅데이터 플랫폼" />
+    <meta name="Description" content="보험개발원 보험정보 빅데이터 플랫폼" />
+
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+
+    <title>보험개발원 보험정보 빅데이터 플랫폼</title>
+
+    <script>
+      $(function () {
+        //  기본 include
+        commonSet.getSkipNav();
+        commonSet.getHeader();
+        commonSet.getFooter();
+
+        //  탭 가져오기
+        commonSet.getDep3();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- container -->
+      <main id="container">
+        <!-- sub_visual -->
+        <section class="sub_visual my_insurance">
+          <div class="inner">
+            <h2 class="sub_visual_ttl">건강정보에 따른 주요 질환 예측 정보</h2>
+            <em class="menu_ttl">메뉴설명</em>
+
+            <nav aria-label="현위치 안내" class="breadcrumb">
+              <ol>
+                <li><span class="home"></span></li>
+                <li><span>보험통계</span></li>
+                <li aria-current="page">
+                  <span>건강정보에 따른 주요 질환 예측 정보</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </section>
+        <!-- //sub_visual -->
+
+        <div class="inner_1120 content"> 
+          <div class="step_wrap">
+              <ul class="flex-c-c">
+                <li class="step01 active">
+                  <div class="ico">
+                    <img
+                      src="../assets/img/sub/step01_ico.png"
+                      alt="step01 입력정보"
+                    />
+                  </div>
+                  <p>step 01</p>
+                </li>
+                <li class="step02">
+                  <div class="ico">
+                    <img
+                      src="../assets/img/sub/step02_ico.png"
+                      alt="step02 입력정보"
+                    />
+                  </div>
+                  <p>step 02</p>
+                </li>
+                <li>
+                  <div class="ico">
+                    <img
+                      src="../assets/img/sub/result_ico.png"
+                      alt="결과보기"
+                    />
+                  </div>
+                  <p>결과보기</p>
+                </li>
+              </ul>
+            </div>
+          <section class="tab_board prediction_form_sect">
+            <!-- 차량등급조회  -->
+           
+            <div class="form_ttl_box">
+              <h2 class="form_ttl">기본정보 입력</h2>
+            </div>
+            <form action="">
+              <div class="input-group flex col-2 mo-block-100">
+              	<p class="form_text text-gray">※아래는 선택사항으로 선택하지 않을 경우 기본값(평균)으로 자동 처리됩니다.</p>
+                <div class="input-wrap w-100">
+                  <label for="user_name">성별</label>
+                  <div class="input-row">
+                    <div
+                      class="radiobox_wrap_type2 flex w-auto-list"
+                      role="radiogroup"
+                    >
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="man"
+                          value="남"
+                          checked
+                        />
+                        <label for="man">남</label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="woman"
+                          value="여"
+                        />
+                        <label for="woman">여</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap">
+           					<label for="age">나이(세) <span class="text_sm">※</span><span class="text_sm text-red text-required">필수 선택값</span><span class="text_sm">,만 나이 입력</span>
+                    </label>
+                  <div class="input-row">
+                    <select name="age" id="age" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="20~24세">20~24세</option>
+                      <option value="25~29세">25~29세</option>
+                      <option value="30~34세">30~34세</option>
+                      <option value="35~39세">35~39세</option>
+                      <option value="40~44세">40~44세</option>
+                      <option value="45~49세">45~49세</option>
+                      <option value="50~54세">50~54세</option>
+                      <option value="55~59세">55~59세</option>
+                      <option value="60~64세">60~64세</option>
+                      <option value="65~69세">65~69세</option>
+                      <option value="70~74세">70~74세</option>
+                      <option value="75~79세">75~79세</option>
+                      <option value="80~84세">80~84세</option>
+                      <option value="85세+">85세+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="stature">키(cm)</label>
+                  <div class="input-row">
+                    <select name="stature" id="stature" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-145">140이상-145미만</option>
+                      <option value="145-148">145이상-148미만</option>
+                      <option value="148-151">148이상-151미만</option>
+                      <option value="151-154">151이상-154미만</option>
+                      <option value="154-157">154이상-157미만</option>
+                      <option value="157-160">157이상-160미만</option>
+                      <option value="160-163">160이상-163미만</option>
+                      <option value="163-166">163이상-166미만</option>
+                      <option value="166-169">166이상-169미만</option>
+                      <option value="169-172">169이상-172미만</option>
+                      <option value="172-175">172이상-175미만</option>
+                      <option value="175-178">175이상-178미만</option>
+                      <option value="178-181">178이상-181미만</option>
+                      <option value="181-190">181이상-190미만</option>
+                      <option value="190-200">190이상-200미만</option>
+                      <option value="200-210">200이상-210미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="weight">몸무게(kg)</label>
+                  <div class="input-row">
+                    <select name="weight" id="weight" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="20-30">20이상-30미만</option>
+                      <option value="30-40">30이상-40미만</option>
+                      <option value="40-45">40이상-45미만</option>
+                      <option value="45-50">45이상-50미만</option>
+                      <option value="50-55">50이상-55미만</option>
+                      <option value="55-60">55이상-60미만</option>
+                      <option value="60-65">60이상-65미만</option>
+                      <option value="65-70">65이상-70미만</option>
+                      <option value="70-75">70이상-75미만</option>
+                      <option value="75-80">75이상-80미만</option>
+                      <option value="80-85">80이상-85미만</option>
+                      <option value="85-90">85이상-90미만</option>
+                      <option value="90-95">90이상-95미만</option>
+                      <option value="95-100">95이상-100미만</option>
+                      <option value="100-105">100이상-105미만</option>
+                      <option value="105-110">105이상-110미만</option>
+                      <option value="110-115">110이상-115미만</option>
+                      <option value="115-120">115이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="waist_measurement">허리둘레(cm)</label>
+                  <div class="input-row">
+                    <select
+                      name="waist_measurement"
+                      id="waist_measurement"
+                      class="bs-select"
+                    >
+                      <option value="">선택하세요</option>
+                      <option value="50-55">50이상-55미만</option>
+                      <option value="55-60">55이상-60미만</option>
+                      <option value="60-65">60이상-65미만</option>
+                      <option value="65-70">65이상-70미만</option>
+                      <option value="70-75">70이상-75미만</option>
+                      <option value="75-80">75이상-80미만</option>
+                      <option value="80-85">80이상-85미만</option>
+                      <option value="85-90">85이상-90미만</option>
+                      <option value="90-95">90이상-95미만</option>
+                      <option value="95-100">95이상-100미만</option>
+                      <option value="100-105">100이상-105미만</option>
+                      <option value="105-110">105이상-110미만</option>
+                      <option value="110-115">110이상-115미만</option>
+                      <option value="115-120">115이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                      <option value="150-160">150이상-160미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="smoking">흡연여부</label>
+                  <div class="input-row">
+                    <div class="radiobox_wrap_type_col" role="radiogroup">
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="smoking"
+                          id="smoking_n"
+                          value="비흡연"
+                          checked
+                        />
+                        <label for="smoking_n">비흡연</label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="smoking"
+                          id="smoking_y"
+                          value="흡연"
+                        />
+                        <label for="smoking_y">흡연</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="drinking ">음주여부</label>
+                  <div class="input-row">
+                    <div class="radiobox_wrap_type_col" role="radiogroup">
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="drinking"
+                          id="drinking_n"
+                          value="마시지 않음"
+                          checked
+                        />
+                        <label for="drinking_n"
+                          >마시지 않거나 거의 마시지 않음</label
+                        >
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="drinking"
+                          id="drinking_y"
+                          value="월2회 이상 마심"
+                          checked
+                        />
+                        <label for="drinking_y">월2회 이상 마심</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="disability">장애여부 </label>
+                  <div class="input-row">
+                    <div class="radiobox_wrap_type_col" role="radiogroup">
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="disability"
+                          id="disability_n"
+                          value="정상"
+                          checked
+                        />
+                        <label for="disability_n">정상</label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="disability"
+                          id="disability_1_2"
+                          value="중증(1~2등급)"
+                        />
+                        <label for="disability_1_2">중증(1~2등급) </label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="disability"
+                          id="disability_3_6"
+                          value="경증(3~6등급)"
+                        />
+                        <label for="disability_3_6">경증(3~6등급) </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="exercise">운동여부 </label>
+                  <div class="input-row">
+                    <div class="radiobox_wrap_type_col" role="radiogroup">
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="exercise"
+                          id="exercise_n"
+                          value="안한다"
+                          checked
+                        />
+                        <label for="exercise_n">안한다 </label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="exercise"
+                          id="exercise_1_2"
+                          value="주 1~2회"
+                        />
+                        <label for="exercise_1_2">주 1~2회 </label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="exercise"
+                          id="exercise_3_4"
+                          value="주 3~4회"
+                        />
+                        <label for="exercise_3_4">주 3~4회 </label>
+                      </div>
+                      <div class="bs-radio">
+                        <input
+                          type="radio"
+                          name="exercise"
+                          id="exercise_5_6"
+                          value="주 5~6회"
+                        />
+                        <label for="exercise_5_6">주 5~6회 </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group flex col-2 mo-block-100">
+                <div class="input-wrap">
+                  <label for="cholesterol">총 콜레스테롤 </label>
+                  <div class="input-row">
+                    <select
+                      name="cholesterol"
+                      id="cholesterol"
+                      class="bs-select"
+                    >
+                      <option value="">선택하세요</option>
+                      <option value="60-80">60이상-80미만</option>
+                      <option value="80-100">80이상-100미만</option>
+                      <option value="100-120">100이상-120미만</option>
+                      <option value="120-140">120이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                      <option value="150-160">150이상-160미만</option>
+                      <option value="160-170">160이상-170미만</option>
+                      <option value="170-180">170이상-180미만</option>
+                      <option value="180-190">180이상-190미만</option>
+                      <option value="190-200">190이상-200미만</option>
+                      <option value="200-210">200이상-210미만</option>
+                      <option value="210-220">210이상-220미만</option>
+                      <option value="220-240">220이상-240미만</option>
+                      <option value="240-260">240이상-260미만</option>
+                      <option value="260-280">260이상-280미만</option>
+                      <option value="280-320">280이상-320미만</option>
+                      <option value="320-360">320이상-360미만</option>
+                      <option value="360-400">360이상-400미만</option>
+                      <option value="440-440">440이상-440미만</option>
+                      <option value="440-480">440이상-480미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="ast">(혈청지오티)AST </label>
+                  <div class="input-row">
+                    <select name="ast" id="ast" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="0-10">0이상-10미만</option>
+                      <option value="10-20">10이상-20미만</option>
+                      <option value="20-30">20이상-30미만</option>
+                      <option value="30-40">30이상-40미만</option>
+                      <option value="40-50">40이상-50미만</option>
+                      <option value="50-60">50이상-60미만</option>
+                      <option value="60-70">60이상-70미만</option>
+                      <option value="70-80">70이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="110-120">110이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-150">130이상-150미만</option>
+                      <option value="150-170">150이상-170미만</option>
+                      <option value="170-190">170이상-190미만</option>
+                      <option value="190-210">190이상-210미만</option>
+                      <option value="210-230">210이상-230미만</option>
+                      <option value="230-250">230이상-250미만</option>
+                      <option value="250-270">250이상-270미만</option>
+                      <option value="270-290">270이상-290미만</option>
+                      <option value="290-310">290이상-310미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="alt">(혈청지피티)ALT </label>
+                  <div class="input-row">
+                    <select name="alt" id="alt" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="0-10">0이상-10미만</option>
+                      <option value="10-20">10이상-20미만</option>
+                      <option value="20-30">20이상-30미만</option>
+                      <option value="30-35">30이상-35미만</option>
+                      <option value="35-40">35이상-40미만</option>
+                      <option value="40-45">40이상-45미만</option>
+                      <option value="45-50">45이상-50미만</option>
+                      <option value="50-60">50이상-60미만</option>
+                      <option value="60-70">60이상-70미만</option>
+                      <option value="70-80">70이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="110-130">110이상-130미만</option>
+                      <option value="130-150">130이상-150미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="hemoglobin">혈색소 </label>
+                  <div class="input-row">
+                    <select name="hemoglobin" id="hemoglobin" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="0-5">0이상-5미만</option>
+                      <option value="5-10">5이상-10미만</option>
+                      <option value="10-11">10이상-11미만</option>
+                      <option value="11-12">11이상-12미만</option>
+                      <option value="12-13">12이상-13미만</option>
+                      <option value="13-14">13이상-14미만</option>
+                      <option value="14-15">14이상-15미만</option>
+                      <option value="15-16">15이상-16미만</option>
+                      <option value="16-17">16이상-17미만</option>
+                      <option value="17-18">17이상-18미만</option>
+                      <option value="18-19">18이상-19미만</option>
+                      <option value="19-20">19이상-20미만</option>
+                      <option value="20-25">20이상-25미만</option>
+                      <option value="25-30">25이상-30미만</option>
+                      <option value="30-40">30이상-40미만</option>
+                      <option value="40-50">40이상-50미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="gamma">감마지티피 </label>
+                  <div class="input-row">
+                    <select name="gamma" id="gamma" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="0-8">0이상-8미만</option>
+                      <option value="8-10">8이상-10미만</option>
+                      <option value="10-12">10이상-12미만</option>
+                      <option value="12-15">12이상-15미만</option>
+                      <option value="15-20">15이상-20미만</option>
+                      <option value="20-30">20이상-30미만</option>
+                      <option value="30-40">30이상-40미만</option>
+                      <option value="40-50">40이상-50미만</option>
+                      <option value="50-60">50이상-60미만</option>
+                      <option value="60-70">60이상-70미만</option>
+                      <option value="70-80">70이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="100-120">100이상-120미만</option>
+                      <option value="120-150">120이상-150미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="diastolic">이완기 혈압 </label>
+                  <div class="input-row">
+                    <select name="diastolic" id="diastolic " class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="50-60">50이상-60미만</option>
+                      <option value="60-70">60이상-70미만</option>
+                      <option value="70-80">70이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="100-110">100이상-110미만</option>
+                      <option value="110-120">110이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                      <option value="150-170">150이상-170미만</option>
+                      <option value="170-190">170이상-190미만</option>
+                      <option value="190-210">190이상-210미만</option>
+                      <option value="210-230">210이상-230미만</option>
+                      <option value="230-250">230이상-250미만</option>
+                      <option value="250-270">250이상-270미만</option>
+                      <option value="270-290">270이상-290미만</option>
+                      <option value="290-310">290이상-310미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="systolic">수축기 혈압 </label>
+                  <div class="input-row">
+                    <select name="systolic " id="systolic " class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="50-60">50이상-60미만</option>
+                      <option value="60-70">60이상-70미만</option>
+                      <option value="70-80">70이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="100-110">100이상-110미만</option>
+                      <option value="110-120">110이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                      <option value="150-170">150이상-170미만</option>
+                      <option value="170-190">170이상-190미만</option>
+                      <option value="190-210">190이상-210미만</option>
+                      <option value="210-230">210이상-230미만</option>
+                      <option value="230-250">230이상-250미만</option>
+                      <option value="250-270">250이상-270미만</option>
+                      <option value="270-290">270이상-290미만</option>
+                      <option value="290-310">290이상-310미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="body_mass">체질량 지수 </label>
+                  <div class="input-row">
+                    <select name="body_mass" id="body_mass" class="bs-select">
+                      <option value="">선택하세요</option>
+                      <option value="10-15">10이상-15미만</option>
+                      <option value="15-20">15이상-20미만</option>
+                      <option value="20-25">20이상-25미만</option>
+                      <option value="25-30">25이상-30미만</option>
+                      <option value="30-35">30이상-35미만</option>
+                      <option value="35-40">35이상-40미만</option>
+                      <option value="40-45">40이상-45미만</option>
+                      <option value="45-50">45이상-50미만</option>
+                      <option value="50-55">50이상-55미만</option>
+                      <option value="55-60">55이상-60미만</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-wrap">
+                  <label for="before_meals">식전혈당(공복혈당) </label>
+                  <div class="input-row">
+                    <select
+                      name="before_meals"
+                      id="before_meals"
+                      class="bs-select"
+                    >
+                      <option value="">선택하세요</option>
+                      <option value="60-80">60이상-80미만</option>
+                      <option value="80-90">80이상-90미만</option>
+                      <option value="90-100">90이상-100미만</option>
+                      <option value="100-110">100이상-110미만</option>
+                      <option value="110-120">110이상-120미만</option>
+                      <option value="120-130">120이상-130미만</option>
+                      <option value="130-140">130이상-140미만</option>
+                      <option value="140-150">140이상-150미만</option>
+                      <option value="150-160">150이상-160미만</option>
+                      <option value="160-170">160이상-170미만</option>
+                      <option value="170-180">170이상-180미만</option>
+                      <option value="180-190">180이상-190미만</option>
+                      <option value="190-200">190이상-200미만</option>
+                      <option value="200-220">200이상-220미만</option>
+                      <option value="220-240">220이상-240미만</option>
+                      <option value="240-260">240이상-260미만</option>
+                      <option value="260-280">260이상-280미만</option>
+                      <option value="280-300">280이상-300미만</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="btn_wrap flex-c-c">
+              <button
+                type="button"
+                onclick="location.href='prediction_service_step02.html'"
+                class="btn btn-light mx-240 arrow_text gray"
+              >
+                <span>다음</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- // container  -->
+    </div>
+
+    <script>
+      const nowBreadcrum = document.querySelector(
+        '.breadcrumb li[aria-current="page"] span'
+      );
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => {
+            t.classList.remove("on");
+            t.setAttribute("aria-selected", "false");
+          });
+          tab.classList.add("on");
+          tab.setAttribute("aria-selected", "true");
+
+          tabContents.forEach((content) => {
+            content.classList.remove("active");
+          });
+
+          const tabId = tab.getAttribute("id").replace("tab", "");
+          const targetTab = document.getElementById("tabpanel" + tabId);
+          targetTab.classList.add("active");
+
+          const activeTabText = tab.innerText;
+          nowBreadcrum.innerText = activeTabText;
+
+          // console.log("현위치: " + activeTabText);
+        });
+      });
+
+      function gradeSearchView() {
+        $(".car_search_view").slideDown();
+      }
+    </script>
+  </body>
+</html>

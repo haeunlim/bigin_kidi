@@ -1,0 +1,51 @@
+
+/* errorPage */
+.error_page{
+    text-align: center;
+    padding:70px 0 60px ;
+  }
+  .error_page picture{
+    margin-bottom: 20px;
+    display: block;
+  }
+  .error_page .sub_text_box{
+    line-height: 1.555;
+  }
+  .go_main_btn{
+    border-radius: 36px;
+    max-width: 260px;
+    line-height: 72px;
+    height: 72px;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .error_page .btn_wrap{
+    margin-top: 60px;
+  }
+  
+  
+@media screen and (max-width: 768px) {
+    
+.error_page{
+    padding: 3.5714rem 0 0;
+  }
+  .error_page picture{
+    margin-bottom: 1.7857rem;
+  
+  }
+  .error_page picture img{
+    width: 8.9286rem;
+  }
+  .go_main_btn{
+    border-radius: 2.0571rem;
+    height: 4.1429rem;
+    line-height: 4.1429rem;
+    font-size: 1.1429rem;
+    max-width: 14.8571rem ;
+  }
+  
+  
+  .error_page .btn_wrap{
+    margin-top: 2.8571rem;
+  }
+  }

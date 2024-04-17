@@ -1,0 +1,53 @@
+/*  {font-family: 'SUIT', sans-serif;} */
+@import url(../../fonts/SUIT.css);
+/* {font-family: 'SUIT Variable', sans-serif;} */
+@import url(../../fonts/SUIT-Variable.css);
+
+/* {font-family: 'SUIT Variable', sans-serif;} */
+@import url(../../fonts/OneMobile.css);
+
+/* 노토산스 */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 350;
+  src: url(../../fonts/notokr-demilight.eot);
+  src: local("notokr-demilight"), 
+  url(../../fonts/notokr-demilight.eot?#iefix) format("embedded-opentype"), 
+  url(../../fonts/notokr-demilight.woff) format("woff"), 
+  url(../../fonts/notokr-demilight.woff2) format("woff2"), 
+  url(../../fonts/notokr-demilight.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  src: url(../../fonts/notokr-regular.eot);
+  src: local("notokr-regular"), 
+      url(../../fonts/notokr-regular.eot?#iefix) format("embedded-opentype"), 
+      url(../../fonts/notokr-regular.woff) format("woff"), 
+      url(../../fonts/notokr-regular.woff2) format("woff2"), 
+      url(../../fonts/notokr-regular.ttf) format("truetype");
+      font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  src: url(../../fonts/notokr-medium.eot);
+  src: local("notokr-medium"), 
+      url(../../fonts/notokr-medium.eot?#iefix) format("embedded-opentype"), 
+      url(../../fonts/notokr-medium.woff) format("woff"), 
+      url(../../fonts/notokr-medium.woff2) format("woff2"), 
+      url(../../fonts/notokr-medium.ttf) format("truetype");
+      font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  src: url(../../fonts/notokr-bold.eot);
+  src: local("notokr-bold"), 
+      url(../../fonts/notokr-bold.eot?#iefix) format("embedded-opentype"), 
+      url(../../fonts/notokr-bold.woff) format("woff"), 
+      url(../../fonts/notokr-bold.woff2) format("woff2"), 
+      url(../../fonts/notokr-bold.ttf) format("truetype");
+      font-display: swap;
+}
